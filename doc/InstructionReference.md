@@ -23,9 +23,7 @@ Do nothing.
 
 | opcode | encoding   |
 | 0x01   | r/r        |
-| 0x02   | rx/rx      |
-| 0x03   | rx/imm64   |
-| 0x04   | rx/imm32   |
-| 0x05   | rx/imm16   |
-| 0x06   | rx/imm8    |
-| 0x07   | rx/
+| 0x02   | r/imm64    |
+| 0x03   | r/imm32    |
+| 0x04   | r/imm16    |
+| 0x05   | r/imm8     |

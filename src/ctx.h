@@ -1,6 +1,7 @@
 #ifndef MUSH_PRIVATE_CTX_H
 #define MUSH_PRIVATE_CTX_H
 
+#include <stddef.h>
 #include <stdint.h>
 #include <mush/mush.h>
 
