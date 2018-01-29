@@ -9,13 +9,18 @@ typedef struct mush_ctx_ mush_ctx;
  * init.c
  */
 
-mush_ctx*   mush_init();
-void        mush_quit(mush_ctx* ctx);
+mush_ctx*       mush_init();
+void            mush_quit(mush_ctx* ctx);
 
 /*
  * dump.c
  */
 
-void        mush_dump(mush_ctx* ctx);
+void            mush_dump(mush_ctx* ctx);
+
+/*
+ * disasm.c
+ */
+const void*     mush_disasm(char* buffer, const void* iptr);
 
 #endif

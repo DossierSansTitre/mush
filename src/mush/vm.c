@@ -18,11 +18,10 @@ static void vm_run_inst(mush_ctx* ctx)
 
     /* MOV r/r */
     case 0x01:
-        reg1 = *iptr;
-        reg2 = (reg1 & 0xf0) >> 16;
-        reg1 &= 0x0f;
+        reg1 = *iptr++;
+        reg2 = *iptr++;
         ctx->regs.r[reg1] = ctx->regs.r[reg2];
-        ctx->regs.rip += 2;
+        ctx->regs.rip += 3;
         break;
 
     /* MOV r/imm64 */

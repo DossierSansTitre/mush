@@ -1,11 +1,13 @@
 #include <mush/mush.h>
 
 #include <ctx.h>
+#include <stdio.h>
 
 void mush_vm_run(void*);
 
 int main(int argc, char **argv)
 {
+    char buf[512];
     mush_ctx* ctx;
 
     ctx = mush_init();
@@ -20,6 +22,8 @@ int main(int argc, char **argv)
     ctx->memory[0x2007] = 0xbc;
     ctx->memory[0x2008] = 0xde;
     ctx->memory[0x2009] = 0xff;
+    mush_disasm(buf, ctx->memory + 0x2000);
+    puts(buf);
     mush_vm_run(ctx);
     mush_dump(ctx);
     mush_quit(ctx);
