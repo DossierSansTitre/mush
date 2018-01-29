@@ -1,6 +1,8 @@
 main:
+    PUSH r12
     MOV r1, 0x1234
     MOV r0, r1
     NOP
     NOP
     MOV r24, r3
+    POP r12

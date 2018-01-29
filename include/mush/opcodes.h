@@ -21,6 +21,8 @@ static const mush_op mush_op_table[] = {
     {"MOV", {A_REG, A_IMM32}},
     {"MOV", {A_REG, A_IMM16}},
     {"MOV", {A_REG, A_IMM8}},
+    {"PUSH", {A_REG}},
+    {"POP", {A_REG}}
 };
 
 #endif
